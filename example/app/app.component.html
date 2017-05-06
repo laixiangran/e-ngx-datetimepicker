@@ -1,0 +1,19 @@
+<div class="app_main">
+	<h1>datetimepicker directive for Angular</h1>
+	<form class="form-group" #form="ngForm">
+		<div class="form-group" style="position: relative;">
+			<label>
+				选择日期：
+				<input type="text" class="form-control"
+					   essence-ng2-datetimepicker
+					   name="time"
+					   [(ngModel)]="datetime"
+					   [options]="options"
+					   #time="ngModel"
+					   required
+					   readonly
+					   (changeDate)="onChangeDate($event)">
+			</label>
+		</div>
+	</form>
+</div>
