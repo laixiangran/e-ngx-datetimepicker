@@ -90,6 +90,14 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 
 - `destroy` - 销毁日期控件
 
+## Develop
+
+	```shell
+	npm install // 安装依赖包
+	
+	npm start // 启动项目
+	```
+
 # License
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)
