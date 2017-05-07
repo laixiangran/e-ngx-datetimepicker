@@ -3,8 +3,6 @@
  * homepage：http://www.laixiangran.cn.
  */
 
-declare let $: any;
-
 import {Directive, ElementRef, Input, Output, OnInit, OnDestroy, Self, EventEmitter, Renderer2} from "@angular/core";
 import {ControlValueAccessor, NgModel} from "@angular/forms";
 

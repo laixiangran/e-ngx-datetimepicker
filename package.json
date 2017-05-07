@@ -33,7 +33,9 @@
 	},
 	"module": "dist/index.js",
 	"typings": "dist/index.d.ts",
-	"dependencies": {},
+	"dependencies": {
+		"@types/jquery": "^2.0.43"
+	},
 	"devDependencies": {
 		"@angular/core": "^2.4.8",
 		"@angular/common": "^2.4.8",
