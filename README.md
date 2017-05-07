@@ -2,7 +2,7 @@
 
 essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 
-[bootstrap-datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
+依赖的第三方插件：[bootstrap-datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
 
 ## Usage
 
