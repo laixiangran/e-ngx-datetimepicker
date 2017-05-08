@@ -15,6 +15,6 @@ export class AppComponent {
 	constructor () {}
 
 	onChangeDate ($event: any) {
-		console.log(new Date($event));
+		console.log($event);
 	}
 }

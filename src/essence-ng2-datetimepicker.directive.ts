@@ -13,11 +13,14 @@ import {ControlValueAccessor, NgModel} from "@angular/forms";
 export class EssenceNg2ChartDatetimepickerDirective implements ControlValueAccessor, OnInit, OnDestroy {
 	private el: HTMLElement;
 	private cd: NgModel;
-	private text: string | Date;
+	public render: Renderer2;
+	private currentDate: any;
 	private defaultOptions: any = {
 		locale: 'zh-cn',
 		ignoreReadonly: true
 	};
+	public onChange: any = Function.prototype;
+	public onTouched: any = Function.prototype;
 
 	// 输入属性
 	@Input() set options (options: any) {
@@ -34,11 +37,15 @@ export class EssenceNg2ChartDatetimepickerDirective implements ControlValueAcces
 	@Output() updateDate: EventEmitter<any> = new EventEmitter<any>(false);
 	@Output() errorDate: EventEmitter<any> = new EventEmitter<any>(false);
 
-	constructor (@Self() cd: NgModel,
-				 private elRef: ElementRef) {
+	constructor (
+		@Self() ngModel: NgModel,
+	 	public renderer: Renderer2,
+	 	public elRef: ElementRef) {
 
 		this.el = elRef.nativeElement;
-		this.cd = cd;
+		this.render = renderer;
+		this.cd = ngModel;
+		this.cd.valueAccessor = this;
 	}
 
 	ngOnInit () {
@@ -63,14 +70,9 @@ export class EssenceNg2ChartDatetimepickerDirective implements ControlValueAcces
 		this.commonPicker().on('dp.change', (ev) => {
 			let id: number = window.setTimeout(() => {
 				window.clearTimeout(id);
-				let momentDate: any = ev.date;
-				if (typeof momentDate.toDate === 'function') {
-					let currentDate: string = this.format(momentDate.toDate(), this.commonFn('format')());
-					this.writeValue(currentDate);
-					this.cd.viewToModelUpdate(currentDate);
-					this.cd.viewModel = '';
-					this.changeDate.emit(currentDate);
-				}
+				let currentDate: string = this.format(ev.date.toDate(), this.commonFn('format')());
+				this.writeValue(currentDate);
+				this.changeDate.emit(currentDate);
 			});
 		});
 
@@ -113,7 +115,7 @@ export class EssenceNg2ChartDatetimepickerDirective implements ControlValueAcces
 		this.commonFn('hide')();
 	}
 
-	private format (value: string, fmt: string) {
+	private format (value: any, fmt: string) {
 		let date: Date = new Date(value);
 		let o = {
 			"M+": date.getMonth() + 1, //月份
@@ -125,19 +127,32 @@ export class EssenceNg2ChartDatetimepickerDirective implements ControlValueAcces
 			"S": date.getMilliseconds() //毫秒
 		};
 		if (/(Y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
-		for (let k in o)
-			if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+		for (let k in o) {
+			if (new RegExp("(" + k + ")").test(fmt)) {
+				fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+			}
+		}
 		return fmt;
 	}
 
 	// 以下实现ControlValueAccessor接口的方法
-	writeValue (value: string | Date): void {
-		this.text = value;
+	writeValue (value: any): void {
+		if (value) {
+			if ((new Date(value).toString() != 'Invalid Date')) {
+				this.currentDate = this.format(value, this.commonFn('format')());
+				this.render.setProperty(this.el, 'value', this.currentDate);
+				this.onChange(this.currentDate);
+			} else {
+				throw `${value} - 无效的日期，请检查！`
+			}
+		}
 	}
 
-	registerOnChange (fn: any): void {
+	registerOnChange (fn: (_: any) => {}): void {
+		this.onChange = fn;
 	}
 
-	registerOnTouched (fn: any): void {
+	registerOnTouched (fn: () => {}): void {
+		this.onTouched = fn;
 	}
 }
