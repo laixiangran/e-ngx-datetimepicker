@@ -101,3 +101,19 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 # License
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)
+
+# Change Log
+
+## 1.0.2 (2017-05-17)
+
+发布内部私有初始版本
+
+## 1.0.1 (2017-05-08)
+
+### Features
+
+- 实现ControlValueAccessor接口
+
+## 1.0.0 (2017-05-06)
+
+发布初始版本
