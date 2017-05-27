@@ -1,3 +1,9 @@
+# 1.0.4 (2017-05-27)
+
+## Features
+
+新增getFn(fnName: string): Function - 根据函数名称获取bootstrap-datetimepicker函数
+
 # 1.0.3 (2017-05-27)
 
 ## Other

@@ -7,15 +7,17 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from "@angular/forms";
 
-import {EssenceNg2ChartDatetimepickerDirective} from "./essence-ng2-datetimepicker.directive";
+import {
+	EssenceNg2DatetimepickerDirective
+} from "./essence-ng2-datetimepicker.directive";
 
 @NgModule({
 	imports: [
 		CommonModule,
 		FormsModule
 	],
-	declarations: [EssenceNg2ChartDatetimepickerDirective],
-	exports: [EssenceNg2ChartDatetimepickerDirective]
+	declarations: [EssenceNg2DatetimepickerDirective],
+	exports: [EssenceNg2DatetimepickerDirective]
 })
 export class EssenceNg2ChartDatetimepickerModule {
 }
