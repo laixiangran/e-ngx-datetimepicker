@@ -9,20 +9,25 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 1. Install
 
 	```shell
-	npm install --save essence-ng2-datetimepicker
+	npm install --save essence-ng2-datetimepicker@latest
 	```
 	
-2. 在index.html引入jquery、bootstrap、bootstrap-datetimepicker
+2. Set in the .angular-cli.json（@angular/cli）
 
-	```html
-	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://cdn.bootcss.com/bootstrap-datetimepicker/4.17.45/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-    
-    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://cdn.bootcss.com/moment.js/2.17.1/moment.min.js"></script>
-    <script src="http://cdn.bootcss.com/moment.js/2.17.1/moment-with-locales.min.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap-datetimepicker/4.17.45/js/bootstrap-datetimepicker.min.js"></script>
+    下载bootstrap-datetimepicker并放在如assets/scripts下，然后在.angular-cli.json配置：
+
+	```json
+    "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "./assets/scripts/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"
+    ],
+    "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/moment/min/moment.min.js",
+        "../node_modules/moment/min/moment-with-locales.min.js",
+        "./assets/scripts/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+    ]
 	```
 
 3. Add the EssenceNg2ChartDatetimepickerModule
@@ -101,19 +106,3 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 # License
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)
-
-# Change Log
-
-## 1.0.2 (2017-05-17)
-
-发布内部私有初始版本
-
-## 1.0.1 (2017-05-08)
-
-### Features
-
-- 实现ControlValueAccessor接口
-
-## 1.0.0 (2017-05-06)
-
-发布初始版本

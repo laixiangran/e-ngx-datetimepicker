@@ -1,6 +1,6 @@
 {
 	"name": "essence-ng2-datetimepicker",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "essence-ng2-datetimepicker is a datetimepicker directive for Angular.",
 	"keywords": [
 		"angular2",
@@ -24,17 +24,18 @@
 	},
 	"scripts": {
 		"prepublish": "ngc",
-		"start": "npm run jit",
-		"jit": "ng serve -o",
-		"aot": "ng serve -o --aot",
-		"build": "npm run build-test",
+		"start": "ng serve -o",
 		"build-test": "ng build --prod --env=test --aot",
 		"build-prod": "ng build --prod --env=prod --aot"
 	},
 	"module": "dist/index.js",
 	"typings": "dist/index.d.ts",
 	"dependencies": {
-		"@types/jquery": "^2.0.43"
+		"@types/bootstrap": "^3.3.33",
+		"@types/jquery": "^2.0.43",
+		"bootstrap": "^3.3.7",
+		"jquery": "^3.2.1",
+		"moment": "^2.18.1"
 	},
 	"devDependencies": {
 		"@angular/core": "^4.0.0",
