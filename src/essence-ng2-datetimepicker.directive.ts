@@ -147,6 +147,8 @@ export class EssenceNg2DatetimepickerDirective implements ControlValueAccessor, 
             } else {
                 throw `${value} - 无效的日期，请检查！`
             }
+        } else {
+            this.render.setProperty(this.el, 'value', '');
         }
     }
 

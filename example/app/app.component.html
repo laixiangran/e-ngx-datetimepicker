@@ -16,6 +16,10 @@
 					   (changeDate)="onChangeDate($event)">
 			</label>
 		</div>
+		<div class="text-danger" *ngIf="time.invalid && !time.pristine">
+			必须输入时间！
+		</div>
 	</form>
-	<button class="btn" (click)="setMinDate()">设置最小时间</button>
+	<button class="btn btn-primary" (click)="setMinDate()">设置最小时间</button>
+	<button class="btn btn-danger" (click)="clearDate()">清空数据</button>
 </div>

@@ -1,3 +1,7 @@
+# 1.0.6 (2017-06-07)
+
+修复 ngModel清空之后，输入框还有值的问题
+
 # 1.0.5 (2017-06-07)
 
 修改 EssenceNg2ChartDatetimepickerModule 为 EssenceNg2DatetimepickerModule

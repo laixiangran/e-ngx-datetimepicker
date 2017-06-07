@@ -1,6 +1,6 @@
 {
 	"name": "essence-ng2-datetimepicker",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "essence-ng2-datetimepicker is a datetimepicker directive for Angular.",
 	"keywords": [
 		"angular2",

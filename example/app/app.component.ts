@@ -22,11 +22,15 @@ export class AppComponent {
     }
 
     onChangeDate($event: any) {
-        console.log($event);
+        // console.log($event);
     }
 
     setMinDate() {
         this.datetimepicker.getFn('minDate')('2017-05-01');
+    }
+
+    clearDate() {
+        this.datetime = null;
     }
 
 }
