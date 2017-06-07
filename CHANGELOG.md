@@ -1,3 +1,7 @@
+# 1.0.5 (2017-06-07)
+
+修改 EssenceNg2ChartDatetimepickerModule 为 EssenceNg2DatetimepickerModule
+
 # 1.0.4 (2017-05-27)
 
 ## Features

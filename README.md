@@ -30,13 +30,13 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
     ]
 	```
 
-3. Add the EssenceNg2ChartDatetimepickerModule
+3. Add the EssenceNg2DatetimepickerModule
 
 	```typescript
-	import {EssenceNg2ChartDatetimepickerModule} from "essence-ng2-datetimepicker";
+	import {EssenceNg2DatetimepickerModule} from "essence-ng2-datetimepicker";
 	@NgModule({
 	    imports: [
-	        EssenceNg2ChartDatetimepickerModule
+	        EssenceNg2DatetimepickerModule
 	    ]
 	})
 	```
@@ -85,7 +85,7 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 
 ### Outputs
 
-- `ready` - `return ($event)`; datetimepicker初始化完成的事件，$event为当前EssenceNg2ChartDatetimepickerDirective实例
+- `ready` - `return ($event)`; datetimepicker初始化完成的事件，$event为当前EssenceNg2DatetimepickerDirective实例
 
 - `changeDate` - `return ($event)`; 时间改变触发的事件，$event为当前的时间
 

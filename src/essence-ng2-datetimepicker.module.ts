@@ -19,5 +19,5 @@ import {
 	declarations: [EssenceNg2DatetimepickerDirective],
 	exports: [EssenceNg2DatetimepickerDirective]
 })
-export class EssenceNg2ChartDatetimepickerModule {
+export class EssenceNg2DatetimepickerModule {
 }
