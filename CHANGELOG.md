@@ -1,3 +1,7 @@
+# 1.0.8 (2017-06-07)
+
+修复 将Renderer改为Renderer2
+
 # 1.0.7 (2017-06-07)
 
 修复 为兼容老项目，将Renderer2改为Renderer

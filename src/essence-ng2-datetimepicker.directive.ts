@@ -3,7 +3,7 @@
  * homepage：http://www.laixiangran.cn.
  */
 
-import { Directive, ElementRef, Input, Output, OnInit, OnDestroy, Self, EventEmitter, Renderer } from "@angular/core";
+import { Directive, ElementRef, Input, Output, OnInit, OnDestroy, Self, EventEmitter, Renderer2 } from "@angular/core";
 import { ControlValueAccessor, NgModel } from "@angular/forms";
 
 @Directive({
@@ -13,7 +13,7 @@ import { ControlValueAccessor, NgModel } from "@angular/forms";
 export class EssenceNg2DatetimepickerDirective implements ControlValueAccessor, OnInit, OnDestroy {
     private el: HTMLElement;
     private cd: NgModel;
-    public render: Renderer;
+    public render: Renderer2;
     private currentDate: any;
     private defaultOptions: any = {
         locale: 'zh-cn',
@@ -38,7 +38,7 @@ export class EssenceNg2DatetimepickerDirective implements ControlValueAccessor, 
     @Output() errorDate: EventEmitter<any> = new EventEmitter<any>(false);
 
     constructor(@Self() ngModel: NgModel,
-                public renderer: Renderer,
+                public renderer: Renderer2,
                 public elRef: ElementRef) {
 
         this.el = elRef.nativeElement;
@@ -142,13 +142,13 @@ export class EssenceNg2DatetimepickerDirective implements ControlValueAccessor, 
         if (value) {
             if ((new Date(value).toString() != 'Invalid Date')) {
                 this.currentDate = this.format(value, this.commonFn('format')());
-                this.render.setElementProperty(this.el, 'value', this.currentDate);
+                this.render.setProperty(this.el, 'value', this.currentDate);
                 this.onChange(this.currentDate);
             } else {
                 throw `${value} - 无效的日期，请检查！`
             }
         } else {
-            this.render.setElementProperty(this.el, 'value', '');
+            this.render.setProperty(this.el, 'value', null);
         }
     }
 
