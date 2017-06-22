@@ -25,7 +25,9 @@ export class EssenceNg2DatetimepickerDirective implements ControlValueAccessor, 
     // 输入属性
     @Input() set options(options: any) {
         this.destroy();
-        this.defaultOptions = $.extend(true, this.defaultOptions, options);
+        if (options) {
+            this.defaultOptions = $.extend(true, this.defaultOptions, options);
+        }
         this.commonPicker(this.defaultOptions);
     }
 

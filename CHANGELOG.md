@@ -1,3 +1,7 @@
+# 1.1.0 (2017-06-22)
+
+修复 options为null或者undefined时日期控件无效的bug
+
 # 1.0.9 (2017-06-22)
 
 新增 bootstrap-datetimepicker的文件
