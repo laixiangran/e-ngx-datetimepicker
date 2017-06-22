@@ -23,6 +23,7 @@
 		"src/index.ts"
 	],
 	"exclude": [
+		"src/assets",
 		"node_modules",
 		"example"
 	],

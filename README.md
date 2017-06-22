@@ -14,18 +14,16 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 	
 2. Set in the .angular-cli.json（@angular/cli）
 
-    下载bootstrap-datetimepicker并放在如assets/scripts下，然后在.angular-cli.json配置：
-
 	```json
     "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "./assets/scripts/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"
+        "../node_modules/essence-ng2-datetimepicker/dist/assets/css/bootstrap-datetimepicker.min.css"
     ],
     "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/moment/min/moment.min.js",
         "../node_modules/moment/min/moment-with-locales.min.js",
-        "./assets/scripts/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js",
+        "../node_modules/essence-ng2-datetimepicker/dist/assets/js/bootstrap-datetimepicker.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js"
     ]
 	```
@@ -41,7 +39,7 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 	})
 	```
 
-4. template
+4. Use in Template
 
 	**父元素必须设置position: relative**
 
@@ -64,7 +62,7 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 	</form>
 	```
 
-5. component
+5. Use in Component
 
 	```typescript
 	datetime: any;

@@ -11,17 +11,16 @@
 			"main": "main.ts",
 			"polyfills": "polyfills.ts",
 			"tsconfig": "tsconfig.json",
-			"prefix": "",
 			"styles": [
 				"./index.css",
 				"../node_modules/bootstrap/dist/css/bootstrap.min.css",
-				"./assets/scripts/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"
+				"../src/assets/css/bootstrap-datetimepicker.min.css"
 			],
 			"scripts": [
 				"../node_modules/jquery/dist/jquery.min.js",
 				"../node_modules/moment/min/moment.min.js",
 				"../node_modules/moment/min/moment-with-locales.min.js",
-				"./assets/scripts/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js",
+				"../src/assets/js/bootstrap-datetimepicker.min.js",
 				"../node_modules/bootstrap/dist/js/bootstrap.min.js"
 			],
 			"environmentSource": "environments/environment.ts",
@@ -33,7 +32,6 @@
 		}
 	],
 	"defaults": {
-		"styleExt": "scss",
-		"component": {}
+		"styleExt": "scss"
 	}
 }
