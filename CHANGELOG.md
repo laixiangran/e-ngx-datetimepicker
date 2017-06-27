@@ -1,3 +1,7 @@
+# 1.1.1 (2017-06-27)
+
+新增 updateDate事件
+
 # 1.1.0 (2017-06-22)
 
 修复 options为null或者undefined时日期控件无效的bug

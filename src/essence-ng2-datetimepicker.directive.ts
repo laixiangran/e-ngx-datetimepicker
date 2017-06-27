@@ -78,7 +78,12 @@ export class EssenceNg2DatetimepickerDirective implements ControlValueAccessor, 
         });
 
         this.commonPicker().on('dp.update', (ev) => {
-            this.updateDate.emit(ev);
+            let id: number = window.setTimeout(() => {
+                window.clearTimeout(id);
+                let currentDate: string = this.format(ev.date.toDate(), this.commonFn('format')());
+                this.writeValue(currentDate);
+                this.updateDate.emit(currentDate);
+            });
         });
 
         this.commonPicker().on('dp.error', (ev) => {

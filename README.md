@@ -87,6 +87,8 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 
 - `changeDate` - `return ($event)`; 时间改变触发的事件，$event为当前的时间
 
+- `updateDate` - `return ($event)`; 时间视图改变触发的事件，$event为当前的时间
+
 ### Instance Method
 
 - `getFn(fnName: string): Function` - 根据函数名称获取bootstrap-datetimepicker函数
