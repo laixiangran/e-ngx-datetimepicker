@@ -3,13 +3,13 @@
  * homepage：http://www.laixiangran.cn.
  */
 
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule} from "@angular/forms";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import {
 	EssenceNg2DatetimepickerDirective
-} from "./essence-ng2-datetimepicker.directive";
+} from './essence-ng2-datetimepicker.directive';
 
 @NgModule({
 	imports: [

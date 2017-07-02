@@ -6,6 +6,7 @@
 				选择日期：
 				<input type="text" class="form-control"
 					   essence-ng2-datetimepicker
+					   #eNgDTPicker="eNgDTPicker"
 					   name="time"
 					   [(ngModel)]="datetime"
 					   [options]="options"
@@ -20,6 +21,7 @@
 			必须输入时间！
 		</div>
 	</form>
-	<button class="btn btn-primary" (click)="setMinDate()">设置最小时间</button>
+	<button class="btn btn-primary" (click)="eNgDTPicker.getFn('minDate')('2017-05-01')">设置最小时间（模板调用）</button>
+	<button class="btn btn-primary" (click)="setMinDate()">设置最小时间（组件类调用）</button>
 	<button class="btn btn-danger" (click)="clearDate()">清空数据</button>
 </div>

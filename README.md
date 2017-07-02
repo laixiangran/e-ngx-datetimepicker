@@ -45,37 +45,60 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 
 	```html
 	<form class="form-group" #form="ngForm">
-	    <div class="form-group" style="position: relative;">
-	        <label>
-	            选择日期：
-	            <input type="text" class="form-control"
-	                   essence-ng2-datetimepicker
-	                   name="time"
-	                   [(ngModel)]="datetime"
-	                   [options]="options"
-	                   #time="ngModel"
-	                   required
-	                   readonly
-	                   (changeDate)="onChangeDate($event)">
-	        </label>
-	    </div>
+		<div class="form-group" style="position: relative;">
+			<label>
+				选择日期：
+				<input type="text" class="form-control"
+					   essence-ng2-datetimepicker
+					   #eNgDTPicker="eNgDTPicker"
+					   name="time"
+					   [(ngModel)]="datetime"
+					   [options]="options"
+					   required
+					   readonly
+					   (ready)="onReady($event)"
+					   (changeDate)="onChangeDate($event)">
+			</label>
+		</div>
 	</form>
+	<button class="btn btn-primary" (click)="eNgDTPicker.getFn('minDate')('2017-05-01')">设置最小时间（模板调用）</button>
+    <button class="btn btn-primary" (click)="setMinDate()">设置最小时间（组件类调用）</button>
+    <button class="btn btn-danger" (click)="clearDate()">清空数据</button>
 	```
 
 5. Use in Component
 
 	```typescript
-	datetime: any;
+	datetimepicker: EssenceNg2DatetimepickerDirective;
+    datetime: any;
     options: any = {
         format: 'YYYY-MM-DD hh:mm:ss'
     };
 
-    onChangeDate ($event: any) {
-        console.log(new Date($event));
+    constructor() {}
+
+    onReady($event: EssenceNg2DatetimepickerDirective) {
+        this.datetimepicker = $event;
+    }
+
+    onChangeDate($event: any) {
+        // console.log($event);
+    }
+
+    setMinDate() {
+        this.datetimepicker.getFn('minDate')('2017-05-01');
+    }
+
+    clearDate() {
+        this.datetime = null;
     }
 	```
 
 ## API
+
+### exportAs
+
+- `eNgDTPicker` - 导出的指令变量，可在模板获取指令类并调用（`#eNgDTPicker="eNgDTPicker"`）。
 
 ### Inputs
 

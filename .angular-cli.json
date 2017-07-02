@@ -1,4 +1,8 @@
 {
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"project": {
+		"name": "essence-ng2-datetimepicker"
+	},
 	"apps": [
 		{
 			"root": "example",
@@ -12,7 +16,7 @@
 			"polyfills": "polyfills.ts",
 			"tsconfig": "tsconfig.json",
 			"styles": [
-				"./index.css",
+				"styles.css",
 				"../node_modules/bootstrap/dist/css/bootstrap.min.css",
 				"../src/assets/css/bootstrap-datetimepicker.min.css"
 			],
@@ -31,7 +35,13 @@
 			}
 		}
 	],
+	"lint": [
+		{
+			"project": "src/tsconfig.app.json"
+		}
+	],
 	"defaults": {
-		"styleExt": "scss"
+		"styleExt": "scss",
+		"component": {}
 	}
 }
