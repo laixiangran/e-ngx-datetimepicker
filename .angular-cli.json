@@ -16,7 +16,7 @@
 			"polyfills": "polyfills.ts",
 			"tsconfig": "tsconfig.json",
 			"styles": [
-				"styles.css",
+				"styles.scss",
 				"../node_modules/bootstrap/dist/css/bootstrap.min.css",
 				"../src/assets/css/bootstrap-datetimepicker.min.css"
 			],
