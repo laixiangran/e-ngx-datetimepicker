@@ -1,16 +1,16 @@
 {
-	"name": "essence-ng2-datetimepicker",
-	"version": "1.1.3",
-	"description": "essence-ng2-datetimepicker is a datetimepicker directive for Angular.",
+	"name": "e-ngx-datetimepicker",
+	"version": "1.2.0",
+	"description": "基于Angular的日期组件，依赖的第三方插件：bootstrap-datetimepicker",
 	"keywords": [
-		"angular2",
+		"angular",
 		"datetimepicker",
 		"laixiangran"
 	],
-	"homepage": "https://github.com/laixiangran/essence-ng2-datetimepicker#readme",
+	"homepage": "https://github.com/laixiangran/e-ngx-datetimepicker#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/laixiangran/essence-ng2-datetimepicker.git"
+		"url": "https://github.com/laixiangran/e-ngx-datetimepicker.git"
 	},
 	"author": {
 		"name": "赖祥燃",
@@ -20,7 +20,7 @@
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/laixiangran/essence-ng2-datetimepicker/issues"
+		"url": "https://github.com/laixiangran/e-ngx-datetimepicker/issues"
 	},
 	"scripts": {
 		"release": "ngc && gulp copy && npm publish",

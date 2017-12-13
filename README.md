@@ -1,6 +1,6 @@
-# essence-ng2-datetimepicker
+# e-ngx-datetimepicker
 
-essence-ng2-datetimepicker is a datetimepicker directive for Angular.
+基于Angular的日期组件。
 
 依赖的第三方插件：[bootstrap-datetimepicker](http://eonasdan.github.io/bootstrap-datetimepicker/)
 
@@ -9,7 +9,7 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 1. Install
 
 	```shell
-	npm install --save essence-ng2-datetimepicker@latest
+	npm install --save e-ngx-datetimepicker@latest
 	```
 	
 2. Set in the .angular-cli.json（@angular/cli）
@@ -17,24 +17,24 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 	```json
     "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "../node_modules/essence-ng2-datetimepicker/dist/assets/css/bootstrap-datetimepicker.min.css"
+        "../node_modules/e-ngx-datetimepicker/dist/assets/css/bootstrap-datetimepicker.min.css"
     ],
     "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/moment/min/moment.min.js",
         "../node_modules/moment/min/moment-with-locales.min.js",
-        "../node_modules/essence-ng2-datetimepicker/dist/assets/js/bootstrap-datetimepicker.min.js",
+        "../node_modules/e-ngx-datetimepicker/dist/assets/js/bootstrap-datetimepicker.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js"
     ]
 	```
 
-3. Add the EssenceNg2DatetimepickerModule
+3. Add the ENgxDatetimepickerModule
 
 	```typescript
-	import {EssenceNg2DatetimepickerModule} from "essence-ng2-datetimepicker";
+	import {ENgxDatetimepickerModule} from "e-ngx-datetimepicker";
 	@NgModule({
 	    imports: [
-	        EssenceNg2DatetimepickerModule
+	        ENgxDatetimepickerModule
 	    ]
 	})
 	```
@@ -49,8 +49,8 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 			<label>
 				选择日期：
 				<input type="text" class="form-control"
-					   essence-ng2-datetimepicker
-					   #eNgDTPicker="eNgDTPicker"
+					   eNgxDTPicker
+					   #eNgxDTPicker="eNgxDTPicker"
 					   name="time"
 					   [(ngModel)]="datetime"
 					   [options]="options"
@@ -69,7 +69,7 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 5. Use in Component
 
 	```typescript
-	datetimepicker: EssenceNg2DatetimepickerDirective;
+	datetimepicker: ENgxDatetimepickerDirective;
     datetime: any;
     options: any = {
         format: 'YYYY-MM-DD hh:mm:ss'
@@ -77,7 +77,7 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 
     constructor() {}
 
-    onReady($event: EssenceNg2DatetimepickerDirective) {
+    onReady($event: ENgxDatetimepickerDirective) {
         this.datetimepicker = $event;
     }
 
@@ -98,7 +98,7 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 
 ### exportAs
 
-- `eNgDTPicker` - 导出的指令变量，可在模板获取指令类并调用（`#eNgDTPicker="eNgDTPicker"`）。
+- `eNgxDTPicker` - 导出的指令变量，可在模板获取指令类并调用（`#eNgxDTPicker="eNgxDTPicker"`）。
 
 ### Inputs
 
@@ -106,7 +106,7 @@ essence-ng2-datetimepicker is a datetimepicker directive for Angular.
 
 ### Outputs
 
-- `ready` - `return ($event)`; datetimepicker初始化完成的事件，$event为当前EssenceNg2DatetimepickerDirective实例
+- `ready` - `return ($event)`; datetimepicker初始化完成的事件，$event为当前ENgxDatetimepickerDirective实例
 
 - `changeDate` - `return ($event)`; 时间改变触发的事件，$event为改变之后的时间（由于这个事件触发的频率低，建议使用这个事件来获取改变之后的时间）
 

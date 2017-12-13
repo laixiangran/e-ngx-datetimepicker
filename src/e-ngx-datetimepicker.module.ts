@@ -8,16 +8,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import {
-	EssenceNg2DatetimepickerDirective
-} from './essence-ng2-datetimepicker.directive';
+	ENgxDatetimepickerDirective
+} from './e-ngx-datetimepicker.directive';
 
 @NgModule({
 	imports: [
 		CommonModule,
 		FormsModule
 	],
-	declarations: [EssenceNg2DatetimepickerDirective],
-	exports: [EssenceNg2DatetimepickerDirective]
+	declarations: [ENgxDatetimepickerDirective],
+	exports: [ENgxDatetimepickerDirective]
 })
-export class EssenceNg2DatetimepickerModule {
+export class ENgxDatetimepickerModule {
 }

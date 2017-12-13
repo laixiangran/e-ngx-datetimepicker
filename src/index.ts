@@ -3,6 +3,6 @@
  * homepage：http://www.laixiangran.cn
  */
 
-export { EssenceNg2DatetimepickerModule } from './essence-ng2-datetimepicker.module';
+export { ENgxDatetimepickerModule } from './e-ngx-datetimepicker.module';
 
-export { EssenceNg2DatetimepickerDirective } from './essence-ng2-datetimepicker.directive';
+export { ENgxDatetimepickerDirective } from './e-ngx-datetimepicker.directive';

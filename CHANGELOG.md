@@ -1,3 +1,7 @@
+# 1.2.0 (2017-12-13)
+
+- 将essence-ng2-datetimepicker更名为e-ngx-datetimepicker
+
 # 1.1.3 (2017-07-04)
 
 - 修复 updateDate事件bug

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {
-    EssenceNg2DatetimepickerDirective
-} from '../../src/essence-ng2-datetimepicker.directive';
+    ENgxDatetimepickerDirective
+} from '../../src/e-ngx-datetimepicker.directive';
 
 @Component({
     selector: 'app-root',
@@ -9,7 +9,7 @@ import {
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    datetimepicker: EssenceNg2DatetimepickerDirective;
+    datetimepicker: ENgxDatetimepickerDirective;
     datetime: any;
     options: any = {
         format: 'YYYY-MM-DD hh:mm:ss'
@@ -18,7 +18,7 @@ export class AppComponent {
     constructor() {
     }
 
-    onReady($event: EssenceNg2DatetimepickerDirective) {
+    onReady($event: ENgxDatetimepickerDirective) {
         this.datetimepicker = $event;
     }
 

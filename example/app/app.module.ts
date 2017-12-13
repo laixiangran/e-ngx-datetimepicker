@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { EssenceNg2DatetimepickerModule } from '../../src/essence-ng2-datetimepicker.module';
+import { ENgxDatetimepickerModule } from '../../src/e-ngx-datetimepicker.module';
 
 @NgModule({
 	imports: [
 		BrowserModule,
 		FormsModule,
-		EssenceNg2DatetimepickerModule
+		ENgxDatetimepickerModule
 	],
 	declarations: [
 		AppComponent
